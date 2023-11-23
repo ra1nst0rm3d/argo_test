@@ -1,9 +1,7 @@
 istio-discovery:
   global:
     proxy:
-#      excludeIPRanges: "192.168.118.0/24"
       clusterDomain: "cluster.local"
-      jwtPolicy: "third-party-jwt"
       holdApplicationUntilProxyStarts: true
   meshConfig:
     rootNamespace: "istio-system"
