@@ -7,7 +7,7 @@ spec:
   destination:
     namespace: test
     server: https://kubernetes.default.svc
-  project: deployments
+  project: default
   source:
     path: test
     repoURL: https://github.com/ra1nst0rm3d/argo_test
