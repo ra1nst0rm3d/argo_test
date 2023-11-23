@@ -1,13 +1,14 @@
 apiVersion: v2
 name: istio
-version: 1.20.0
+version: 1.18.0
 dependencies:
   - name: base
-    version: "1.20.0"
+    version: "1.18.0"
     repository: "file://charts/base"
-  - name: gateway
-    version: "1.20.0"
-    repository: "file://charts/gateway"
-  - name: istiod
-    version: "1.20.0"
+  - name: istio-ingress
+    version: "1.18.0"
+    repository: "file://charts/gateways/istio-ingress"
+    alias: istio-ingress-internal
+  - name: istio-discovery
+    version: "1.18.0"
     repository: "file://charts/istiod"
