@@ -1,0 +1,12 @@
+istiod:
+  meshConfig:
+    rootNamespace: "istio-system"
+    accessLogEncoding: "JSON"
+    accessLogFile: "/dev/stdout"
+    trustDomain: "cluster.local"
+gateway:
+  name: ingressgateway-internal
+  labels:
+    app: ""
+    istio: ingressgateway-internal
+  
