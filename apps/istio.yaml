@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: istio
+  namespace: argocd
+spec:
+  destination:
+    namespace: istio-system
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: istio
+    repoURL: https://github.com/ra1nst0rm3d/argo_test
+    targetRevision: HEAD
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
