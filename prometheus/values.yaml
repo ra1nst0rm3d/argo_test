@@ -3342,7 +3342,7 @@ prometheus:
           - targets: ['istiod.istio-system:15014']
       - job_name: istio-envoy-internal
         metrics_path: /stats/prometheus
-        scrape_configs:
+        static_configs:
           - targets: ['ingressgateway-internal.istio-system:15090']
       
     # - job_name: kube-etcd
