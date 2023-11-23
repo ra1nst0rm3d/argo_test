@@ -11,4 +11,4 @@ dependencies:
     alias: istio-ingress-internal
   - name: istio-discovery
     version: "1.18.0"
-    repository: "file://charts/istiod"
+    repository: "file://charts/istio-discovery"
