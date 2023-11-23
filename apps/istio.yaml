@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: istio/cto-dev
+    path: istio
     repoURL: https://github.com/ra1nst0rm3d/argo_test
     targetRevision: HEAD
   syncPolicy:
