@@ -8,7 +8,7 @@ spec:
   hosts:
   - test.localhost
   gateways:
-  - test
+  - istio-system/internal-gateway
   http:
   - match:
     - port: 80
