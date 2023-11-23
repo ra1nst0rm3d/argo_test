@@ -13,6 +13,9 @@ spec:
     repoURL: https://github.com/ra1nst0rm3d/argo_test
     targetRevision: HEAD
   syncPolicy:
+    managedNamespaceMetadata:
+      labels:
+        istio-injection: enabled
     syncOptions:
       - CreateNamespace=true
     ignoreDifferences:
