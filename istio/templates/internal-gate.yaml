@@ -1,0 +1,18 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+metadata:
+  name: internal-gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway-internal
+  servers:
+  - port:
+      name: http
+      number: 80
+      protocol: HTTP
+    hosts:
+    # Services
+    - "prom.localhost"
+    - "test.localhost"
