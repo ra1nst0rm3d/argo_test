@@ -1,0 +1,21 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: PromVService
+  namespace: prometheus
+spec:
+  hosts:
+  - prom.localhost
+  gateways:
+  - istio-system/internal-gateway
+  http:
+  - match:
+    - port: 80
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: prometheus-grafana
+        port:
+          number: 80
