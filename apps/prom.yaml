@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prom
+  name: prometheus
   namespace: argocd
 spec:
   destination:
@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: prom
+    path: prometheus
     repoURL: https://github.com/ra1nst0rm3d/argo_test
     targetRevision: HEAD
   syncPolicy:
