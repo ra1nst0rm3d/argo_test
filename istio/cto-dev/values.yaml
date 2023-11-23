@@ -1,0 +1,49 @@
+istio-discovery:
+  global:
+    proxy:
+#      excludeIPRanges: "192.168.118.0/24"
+      clusterDomain: "cluster.local"
+      jwtPolicy: "third-party-jwt"
+      holdApplicationUntilProxyStarts: true
+  meshConfig:
+    rootNamespace: "istio-system"
+    accessLogEncoding: "JSON"
+    accessLogFile: "/dev/stdout"
+    trustDomain: "cluster.local"
+
+# Istio Internal Gateway
+istio-ingress-internal:
+  global:
+    defaultPodDisruptionBudget:
+      enabled: false
+    proxy:
+      clusterDomain: "cluster.local"
+    jwtPolicy: "third-party-jwt"
+  meshConfig:
+    trustDomain: "cluster.local"
+  gateways:
+    istio-ingressgateway:
+      name: ingressgateway-internal
+      labels:
+        app: ingressgateway-internal
+        istio: ingressgateway-internal
+      type: "LoadBalancer"
+      ports:
+        - name: status-port
+          port: 15021
+          protocol: TCP
+        - name: http2
+          port: 80
+          protocol: TCP
+          targetPort: 8080
+        - name: https
+          port: 443
+          protocol: TCP
+          targetPort: 8443
+        - name: prometheus
+          port: 9090
+          protocol: TCP
+          targetPort: 9090
+      selector:
+          app: ingressgateway-internal
+          istio: ingressgateway-internal
