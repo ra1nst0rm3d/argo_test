@@ -3343,7 +3343,7 @@ prometheus:
       - job_name: istio-envoy-internal
         metrics_path: /stats/prometheus
         static_configs:
-          - targets: ['ingressgateway-internal.istio-system:15090']
+          - targets: ['ingressgateway-internal.istio-system:15020']
       
     # - job_name: kube-etcd
     #   kubernetes_sd_configs:
