@@ -6,6 +6,6 @@ spec:
     hosts:
     - ra1nst0rm3d.ru
     http:
-      route:
+    - route:
       - destination:
           host: ra1nst0rm3d.ru
