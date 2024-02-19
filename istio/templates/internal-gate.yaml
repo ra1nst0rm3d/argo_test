@@ -16,4 +16,4 @@ spec:
     # Services
     - "prom.localhost"
     - "test.localhost"
-    - "ra1nst0rm3d.ru"
+    - "ra1nst0rm3d.ru.test"
