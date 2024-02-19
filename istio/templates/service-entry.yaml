@@ -10,4 +10,6 @@ spec:
     - number: 80
       name: http
       protocol: HTTP
-    resolution: DNS
+    resolution: STATIC
+    endpoints:
+    - address: 176.109.101.16
