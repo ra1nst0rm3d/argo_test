@@ -5,7 +5,11 @@ metadata:
 spec:
     hosts:
     - ra1nst0rm3d.ru.test
+    gateways:
+    - istio-system/internal-gateway
     http:
-    - route:
+    - match:
+      - port: 80
+      route:
       - destination:
           host: ra1nst0rm3d.ru

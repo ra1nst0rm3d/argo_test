@@ -4,7 +4,7 @@ istiod:
     accessLogEncoding: "JSON"
     accessLogFile: "/dev/stdout"
     trustDomain: "cluster.local"
-gateway:
+ingressgateway:
   name: ingressgateway-internal
   labels:
     app: ""
@@ -28,4 +28,16 @@ gateway:
         port: 443
         protocol: TCP
         targetPort: 443
+egressgateway:
+  name: egressgateway
+  labels:
+    app: ""
+    istio: egressgateway
+  service:
+   type: ClusterIP
+   ports:
+     - name: http2
+       port: 80
+       protocol: TCP
+       targetPort: 80
   
