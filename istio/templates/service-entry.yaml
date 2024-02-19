@@ -4,13 +4,10 @@ metadata:
     name: ext-svc-redir
 spec:
     hosts:
-    - g1t3a.ra1nst0rm3d.ru
+    - ra1nst0rm3d.ru
     location: MESH_EXTERNAL
     ports:
     - number: 80
       name: http
       protocol: HTTP
-    - number: 443
-      name: https
-      protocol: HTTPS
     resolution: DNS
