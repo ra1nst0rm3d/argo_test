@@ -16,3 +16,12 @@ spec:
     # Services
     - "prom.localhost"
     - "test.localhost"
+    - "g1t3a.ra1nst0rm3d.ru"
+    tls:
+      httpsRedirect: true
+  - port:
+      name: https
+      number: 443
+      protocol: HTTPS
+    hosts:
+    - "g1t3a.ra1nst0rm3d.ru"
