@@ -9,7 +9,7 @@ createRedisSecret: false
 # create mysql secret in defectdojo chart, outside of mysql chart
 createMysqlSecret: false
 # create postgresql secret in defectdojo chart, outside of postgresql chart
-createPostgresqlSecret: false
+createPostgresqlSecret: true
 # create postgresql-ha secret in defectdojo chart, outside of postgresql-ha chart
 createPostgresqlHaSecret: false
 # create postgresql-ha-pgpool secret in defectdojo chart, outside of postgresql-ha chart
