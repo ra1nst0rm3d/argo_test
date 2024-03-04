@@ -46,13 +46,13 @@ database: postgresql
 host: defectdojo.default.minikube.local
 # The full URL to your defectdojo instance, depends on the domain where DD is deployed, it also affects links in Jira
 # site_url: 'https://<yourdomain>'
-site_url: http://10.101.2.103
+site_url: http://10.104.120.190
 
 # optional list of alternative hostnames to use that gets appended to
 # DD_ALLOWED_HOSTS. This is necessary when your local hostname does not match
 # the global hostname.
 alternativeHosts:
-- 10.101.2.103
+- 10.104.120.190
 imagePullPolicy: Always
 # Where to pull the defectDojo images from. Defaults to "defectdojo/*" repositories on hub.docker.com
 repositoryPrefix: odsazonov
