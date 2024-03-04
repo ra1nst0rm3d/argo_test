@@ -52,7 +52,7 @@ site_url: http://10.99.95.125
 # DD_ALLOWED_HOSTS. This is necessary when your local hostname does not match
 # the global hostname.
 alternativeHosts:
-- 10.99.95.125
+- dd.local
 imagePullPolicy: Always
 # Where to pull the defectDojo images from. Defaults to "defectdojo/*" repositories on hub.docker.com
 repositoryPrefix: odsazonov
