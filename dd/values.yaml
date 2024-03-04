@@ -209,7 +209,7 @@ django:
       # Enable liveness checks on uwsgi container. Those values are use on nginx readiness checks as well.
       enabled: true
       failureThreshold: 6
-      initialDelaySeconds: 120
+      initialDelaySeconds: 20
       periodSeconds: 10
       successThreshold: 1
       timeoutSeconds: 5
@@ -285,7 +285,7 @@ django:
         - ReadWriteMany # check KUBERNETES.md doc first for option to choose
       storageClassName:
 initializer:
-  run: true
+  run: false
   jobAnnotations: {helm.sh/hook: "post-install,post-upgrade"}
   annotations: {}
   labels: {}
