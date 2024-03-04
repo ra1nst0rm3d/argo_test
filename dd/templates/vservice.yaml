@@ -1,0 +1,21 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: test
+  namespace: test
+spec:
+  hosts:
+  - dd.local
+  gateways:
+  - istio-system/internal-gateway
+  http:
+  - match:
+    - port: 80
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        host: dd-defectdojo-django
+        port:
+          number: 80
