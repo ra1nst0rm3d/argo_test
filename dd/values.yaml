@@ -285,7 +285,7 @@ django:
         - ReadWriteMany # check KUBERNETES.md doc first for option to choose
       storageClassName:
 initializer:
-  run: false
+  run: true
   jobAnnotations: {helm.sh/hook: "post-install,post-upgrade"}
   annotations: {}
   labels: {}
