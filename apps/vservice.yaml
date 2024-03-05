@@ -2,7 +2,7 @@
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
-  name: VirtualService
+  name: vs
   namespace: argocd
 spec:
   hosts:
