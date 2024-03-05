@@ -18,3 +18,4 @@ spec:
     - "test.localhost"
     - "ra1nst0rm3d.ru.test"
     - "dd.local"
+    - "argocd.local"
