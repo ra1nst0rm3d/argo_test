@@ -19,3 +19,14 @@ spec:
     - "ra1nst0rm3d.ru.test"
     - "dd.local"
     - "argocd.local"
+    tls:
+      httpsRedirect: true
+  - port:
+      name: https
+      number: 443
+      protocol: HTTPS
+    hosts:
+    - "dd.local"
+    tls:
+      mode: SIMPLE
+      credentialName: tls-secret
