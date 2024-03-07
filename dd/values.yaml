@@ -514,10 +514,20 @@ redis:
 # extraSecrets:
 #   DD_SOCIAL_AUTH_AUTH0_SECRET: 'xxx'
 extraConfigs:
-  DD_SESSION_COOKIE_SECURE: 'False'
-  DD_CSRF_COOKIE_SECURE: 'False'
-  DD_SECURE_SSL_REDIRECT: 'False'
-  DD_CSRF_TRUSTED_ORIGINS: 'http://dd.local'
+  DD_SESSION_COOKIE_SECURE: 'True'
+  DD_CSRF_COOKIE_SECURE: 'True'
+  DD_SECURE_SSL_REDIRECT: 'True'
+  DD_SOCIAL_AUTH_KEYCLOAK_OAUTH2_ENABLED: 'True'
+  DD_SOCIAL_AUTH_KEYCLOAK_PUBLIC_KEY: 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzSvAMy6N1/JJt+em8l7y09QSun0oJXgIlUWuTJpb35VVyr363vV5UyTB/XoYw9TlZjco8R7MyJkB0QUvZNio3Par7ujrx+gHEDaTlDhFjIsnmC8upfvWv/z0KPbDQucYeLIiwteuKP0dUs5x9dBy12PmCv38SAMNAngkKoBRpqtj9bacR9EF6jXW10Gbbm9MVwCaY3E7ULHhFBLE2jf+fQ6mAEoOGP9whHVyrgNZy8B9dP5TIBx7NdNpBj82GpVzDAm0YbIru2kLvdPVDoo4/uxEnqcJFerfOzL4P+4QBsNwUc268kcFRq5D5xOTu9oZUZ1MST4H1xaTeNeGhqURSwIDAQAB'
+  DD_SOCIAL_AUTH_KEYCLOAK_KEY: 'ssdlc'
+  DD_SOCIAL_AUTH_KEYCLOAK_SECRET: 'FO2FbL3UucjCucuIUUhXWt1yYEQLy5vD'
+  DD_SOCIAL_AUTH_KEYCLOAK_AUTHORIZATION_URL: 'http://10.101.142.191:8080/realms/master/protocol/openid-connect/auth'
+  DD_SOCIAL_AUTH_KEYCLOAK_ACCESS_TOKEN_URL: 'http://10.101.142.191:8080/realms/master/protocol/openid-connect/token'
+  DD_SOCIAL_AUTH_KEYCLOAK_USERINFO_URL: 'http://10.101.142.191:8080/realms/master/protocol/openid-connect/userinfo'
+  DD_SOCIAL_AUTH_KEYCLOAK_GET_GROUPS: 'True'
+  DD_SOCIAL_AUTH_KEYCLOAK_GROUPS_FILTER: 'ssdlc*'
+  DD_SOCIAL_AUTH_ALLOW_MASK: 'ssdlc*'
+
 # To add (or override) extra variables which need to be pulled from another configMap, you can
 # use extraEnv. For example:
 # extraEnv:
