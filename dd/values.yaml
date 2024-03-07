@@ -514,9 +514,9 @@ redis:
 # extraSecrets:
 #   DD_SOCIAL_AUTH_AUTH0_SECRET: 'xxx'
 extraConfigs:
-  DD_SESSION_COOKIE_SECURE: 'true'
-  DD_CSRF_COOKIE_SECURE: 'true'
-  DD_SECURE_SSL_REDIRECT: 'True'
+  DD_SESSION_COOKIE_SECURE: 'False'
+  DD_CSRF_COOKIE_SECURE: 'False'
+  DD_SECURE_SSL_REDIRECT: 'False'
 # To add (or override) extra variables which need to be pulled from another configMap, you can
 # use extraEnv. For example:
 # extraEnv:
