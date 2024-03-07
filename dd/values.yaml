@@ -517,6 +517,7 @@ extraConfigs:
   DD_SESSION_COOKIE_SECURE: 'False'
   DD_CSRF_COOKIE_SECURE: 'False'
   DD_SECURE_SSL_REDIRECT: 'False'
+  DD_CSRF_TRUSTED_ORIGINS: 'http://dd.local'
 # To add (or override) extra variables which need to be pulled from another configMap, you can
 # use extraEnv. For example:
 # extraEnv:
